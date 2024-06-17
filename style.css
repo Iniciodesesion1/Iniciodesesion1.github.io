@@ -1,0 +1,171 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: "Roboto";
+    background-color: rgb(18, 121, 35);
+    padding-top: 80px;
+}
+
+h1 {
+    font-family: "Roboto";
+    text-align: center;
+    margin: 30px 0px;
+}
+
+img {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    height: 70px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(97, 161, 218); /* Fondo del encabezado */
+}
+
+.scroll {
+    background-color: aliceblue;
+    box-shadow: .1rem .2rem .3rem #333;
+}
+
+.scroll img {
+    filter: invert(15%);
+}
+
+.scroll h1 {
+    color: #141C29;
+}
+
+.carrito {
+    filter: invert(100%);
+    width: 45px;
+    height: auto;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.contenedor>div {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #2D4263;
+    border-radius: 20px;
+}
+
+.contenedor>div:hover {
+    background-color: #11294d;
+}
+
+.informacion {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.informacion>p:first-child {
+    font-family: "Roboto";
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.informacion .precio {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.informacion .precio span {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.informacion button {
+    background-color: #263143;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 30px;
+    cursor: pointer;
+}
+
+.informacion button:hover {
+    background-color: #2D4263;
+}
+
+.Carrito {
+    width: 50px;
+    height: auto;
+}
+
+/* Estilos para el carrito */
+#carrito {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Inicialmente fuera de la vista */
+    width: 400px;
+    height: 100%;
+    background-color: #CA6F1E; /* Color de fondo del carrito */
+    border-left: 1px solid #ccc;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000; /* Asegúrate de que el carrito esté por encima de otros elementos */
+    overflow-y: auto;
+    padding-top: 80px; /* Espacio para el header */
+}
+
+#carrito.visible {
+    right: 0;
+}
+
+#carrito h2 {
+    margin: 20px;
+    color: black; /* Color del título del carrito */
+}
+
+#lista-carrito {
+    margin: 20px;
+}
+
+#carrito .producto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    color: black; /* Color del texto de los productos en el carrito */
+}
+
+#carrito .producto p {
+    color: black; /* Asegura que el texto dentro del producto sea negro */
+}
+
+#total-carrito {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black; /* Color del total */
+}
